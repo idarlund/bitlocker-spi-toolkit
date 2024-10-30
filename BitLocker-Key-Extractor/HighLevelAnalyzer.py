@@ -165,4 +165,7 @@ class Hla(HighLevelAnalyzer):
             r'2c000[0-6]000[1-9]000[0-1]000[0-5]200000(\w{64})', data)
         if key:
             return key[0]
+        key = re.findall(r'5000000005000000(\w{144})', data)
+        if key:
+            return key[0]
         return None
